@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+</head>
+<body>
+    <form>
+        <input id="fullname" type="text" placeholder="Full Name"><div id="namenotes"></div>
+        <br>
+        <input id="email" type="text" placeholder="Email">
+        <br>
+        <input id="pass" type="password" placeholder="Password">
+        <br>
+        <input id="confirmedPpass" type="password" placeholder="Confirm Password">
+        <br>
+        <input id="phoneno" type="text" placeholder="Phone Number">
+        <br>
+        <button onclick="validateForm()" id="bt1" value="submit">Submit</button>
+
+    </form>
+    
+
+
+    <script>
+        function validateForm(){
+            
+
+            var name=document.getElementById("fullname").value;
+            var email=document.getElementById("email").value;
+            var pass=document.getElementById("pass").value;
+            var cpass=document.getElementById("confirmedpass").value;
+            var pno=document.getElementById("phoneno").value;
+            var nameRegex=/^[A-Za-z]+[ ]+[A-Za-z]+$/i;
+            var emailRegex=/^[A-Za-z][0-9]@[A-Za-z][0-9].[A-Za-z]/
+
+
+
+
+            if(name <= 10){
+                document.getElementById("namenotes").innerHTML="Full Name must be at least  of 10 characters"
+                return false;
+            }
+
+            nameRegex
+            
+
+
+        }
+
+
+
+    </script>
+
+
+
+
+
+
+    
+</body>
+</html>
